@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:nutriva_sprint3/components/hero_section.dart';
+import 'package:nutriva_sprint3/components/heroSection.dart';
 import 'package:nutriva_sprint3/components/navbar.dart';
 
-class TelaInicial extends StatelessWidget {
-  const TelaInicial({super.key});
+class Homescreen extends StatelessWidget {
+  const Homescreen({super.key});
 
   @override
   Widget build(BuildContext context) {

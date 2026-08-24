@@ -12,7 +12,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     Future.delayed(Duration(seconds: 3), () {
-      //AppNavigation.generateRoute('/home'); navegao braba
+      Navigator.of(context).pushReplacementNamed(AppRoutes.home);
     });
   }
 

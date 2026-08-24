@@ -17,7 +17,7 @@ class Homescreen extends StatelessWidget {
             colors: [Color(0xFFF6FBFC), Color(0xFFEAF8FA), Color(0xFFA9E8E5)],
           ),
         ),
-        child: SafeArea(child: Column(children: [Navbar(), HeroSection()])),
+        child: Column(children: [Navbar(), HeroSection()]),
       ),
     );
   }

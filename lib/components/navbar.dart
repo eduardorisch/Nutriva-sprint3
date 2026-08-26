@@ -4,76 +4,83 @@ import 'package:google_fonts/google_fonts.dart';
 class Navbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: ConstrainedBox(
-        constraints: BoxConstraints(maxWidth: 1080),
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 12),
-          child: Row(
-            children: [
-              Row(
+    return Container(
+      width: 1080,
+      margin: EdgeInsets.symmetric(horizontal: 36, vertical: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 24),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(28),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(.06),
+            blurRadius: 15,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 100, vertical: 12),
+        child: Row(
+          children: [
+            Row(
+              children: [
+                Container(
+                  width: 24,
+                  height: 24,
+                  decoration: BoxDecoration(
+                    color: Color(0xFF073457),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Icon(Icons.water_drop, color: Colors.white, size: 12),
+                ),
+                SizedBox(width: 6),
+                Text(
+                  'Nutriva',
+                  style: GoogleFonts.inter(
+                    color: Color(0xFF06294B),
+                    fontSize: 14,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ],
+            ),
+            Spacer(),
+            Row(
+              children: [
+                NavItem('Jornada'),
+                NavItem('Postos'),
+                NavItem('Agendar'),
+                NavItem('Dúvidas'),
+              ],
+            ),
+            Spacer(),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color(0xFF06294B),
+                foregroundColor: Colors.white,
+                padding: EdgeInsets.symmetric(horizontal: 17, vertical: 9),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18),
+                ),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
                 children: [
-                  Container(
-                    width: 24,
-                    height: 24,
-                    decoration: BoxDecoration(
-                      color: Color(0xFF073457),
-                      shape: BoxShape.circle,
-                    ),
-                    child: Icon(
-                      Icons.water_drop,
-                      color: Colors.white,
-                      size: 12,
-                    ),
-                  ),
-                  SizedBox(width: 6),
                   Text(
-                    'Nutriva',
+                    'Doar agora',
                     style: GoogleFonts.inter(
-                      color: Color(0xFF06294B),
-                      fontSize: 14,
-                      fontWeight: FontWeight.w800,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
+                  SizedBox(width: 5),
+                  Icon(Icons.arrow_forward, size: 11),
                 ],
               ),
-              Spacer(),
-                Row(
-                  children: [
-                    NavItem('Jornada'),
-                    NavItem('Postos'),
-                    NavItem('Agendar'),
-                    NavItem('Dúvidas'),
-                  ],
-                ),
-              Spacer(),
-              ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFF06294B),
-                  foregroundColor: Colors.white,
-                  padding: EdgeInsets.symmetric(horizontal: 17, vertical: 9),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18),
-                  ),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      'Doar agora',
-                      style: GoogleFonts.inter(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                    SizedBox(width: 5),
-                    Icon(Icons.arrow_forward, size: 11),
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -13,7 +13,7 @@ class FaqScreen extends StatefulWidget {
 class _FaqScreenState extends State<FaqScreen> {
   int? openedIndex = 0;
 
-  final List<Map<String, String>> faqs = [
+  List<Map<String, String>> faqs = [
     {
       'question': 'Quem pode doar leite materno?',
       'answer':
@@ -39,23 +39,23 @@ class _FaqScreenState extends State<FaqScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF5FAFC),
+      backgroundColor: Color(0xFFF5FAFC),
       body: SafeArea(
         child: Column(
           children: [
-            const SizedBox(height: 8),
+            SizedBox(height: 8),
 
              Navbar(),
 
             Expanded(
               child: SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(
+                padding: EdgeInsets.symmetric(
                   horizontal: 20,
                   vertical: 30,
                 ),
                 child: Center(
                   child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxWidth: 710),
+                    constraints: BoxConstraints(maxWidth: 710),
                     child: Column(
                       children: [
                         Text(
@@ -64,11 +64,11 @@ class _FaqScreenState extends State<FaqScreen> {
                             fontSize: 10,
                             fontWeight: FontWeight.w800,
                             letterSpacing: 1.5,
-                            color: const Color(0xFF55C8CA),
+                            color: Color(0xFF55C8CA),
                           ),
                         ),
 
-                        const SizedBox(height: 10),
+                        SizedBox(height: 10),
 
                         Text(
                           'Tudo que você precisa\nsaber.',
@@ -77,17 +77,17 @@ class _FaqScreenState extends State<FaqScreen> {
                             fontSize: 32,
                             height: 1.0,
                             fontWeight: FontWeight.w900,
-                            color: const Color(0xFF06294C),
+                            color: Color(0xFF06294C),
                           ),
                         ),
 
-                        const SizedBox(height: 32),
+                       SizedBox(height: 32),
 
                         ...List.generate(faqs.length, (index) {
                           final faq = faqs[index];
 
                           return Padding(
-                            padding: const EdgeInsets.only(bottom: 8),
+                            padding: EdgeInsets.only(bottom: 8),
                             child: FaqCard(
                               question: faq['question']!,
                               answer: faq['answer']!,

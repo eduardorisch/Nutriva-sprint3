@@ -3,6 +3,7 @@ import 'package:nutriva_sprint3/navigation/AppRoutes.dart';
 import 'package:nutriva_sprint3/navigation/appNavigation.dart';
 import 'package:nutriva_sprint3/screens/faqScreen.dart';
 import 'package:nutriva_sprint3/screens/homeScreen.dart';
+import 'package:nutriva_sprint3/screens/agendamentoScreen.dart';
 import 'package:nutriva_sprint3/screens/splashScreen.dart';
 
 void main() {
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       //},
       //initialRoute: AppRoutes.splash,
       //onGenerateRoute: AppNavigation.generateRoute,
-      home: FaqScreen(),
+      home: SchedulingScreen(),
     );
   }
 }

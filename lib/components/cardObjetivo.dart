@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nutriva_sprint3/enum/tiposAgendamento.dart';
 
 
@@ -80,7 +81,7 @@ class ObjectivoCard extends StatelessWidget {
              SizedBox(height: 13),
               Text(
                 objetivo.titulo,
-                style: TextStyle(
+                style: GoogleFonts.inter(
                   color: titleColor,
                   fontSize: 15,
                   fontWeight: FontWeight.w800,
@@ -89,7 +90,7 @@ class ObjectivoCard extends StatelessWidget {
              SizedBox(height: 5),
               Text(
                 objetivo.descricao,
-                style: TextStyle(
+                style: GoogleFonts.inter(
                   color: bodyColor,
                   height: 1.25,
                   fontSize: 12,

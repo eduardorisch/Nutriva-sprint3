@@ -17,7 +17,7 @@ class SchedulingPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.fromLTRB(27, 17, 27, 36),
+      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
       decoration: BoxDecoration(
         color: Colors.white.withOpacity(.84),
         borderRadius: BorderRadius.circular(25),

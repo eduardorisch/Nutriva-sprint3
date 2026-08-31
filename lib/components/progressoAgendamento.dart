@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nutriva_sprint3/enum/passosAgendamento.dart';
 
 class ScheduleStepper extends StatelessWidget {
@@ -32,7 +33,7 @@ class ScheduleStepper extends StatelessWidget {
                  SizedBox(height: 8),
                 Text(
                   steps[i].label,
-                  style: TextStyle(
+                  style: GoogleFonts.inter(
                     color: i <= currentStep.index
                         ? Color(0xFF263D4E)
                         : Color(0xFF7B858C),

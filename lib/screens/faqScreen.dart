@@ -44,15 +44,10 @@ class _FaqScreenState extends State<FaqScreen> {
         child: Column(
           children: [
             SizedBox(height: 8),
-
-             Navbar(),
-
+            Navbar(),
             Expanded(
               child: SingleChildScrollView(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 20,
-                  vertical: 30,
-                ),
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
                 child: Center(
                   child: ConstrainedBox(
                     constraints: BoxConstraints(maxWidth: 710),
@@ -67,9 +62,7 @@ class _FaqScreenState extends State<FaqScreen> {
                             color: Color(0xFF55C8CA),
                           ),
                         ),
-
                         SizedBox(height: 10),
-
                         Text(
                           'Tudo que você precisa\nsaber.',
                           textAlign: TextAlign.center,
@@ -80,12 +73,9 @@ class _FaqScreenState extends State<FaqScreen> {
                             color: Color(0xFF06294C),
                           ),
                         ),
-
-                       SizedBox(height: 32),
-
+                        SizedBox(height: 32),
                         ...List.generate(faqs.length, (index) {
                           final faq = faqs[index];
-
                           return Padding(
                             padding: EdgeInsets.only(bottom: 8),
                             child: FaqCard(

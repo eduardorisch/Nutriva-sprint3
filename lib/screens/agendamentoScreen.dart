@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nutriva_sprint3/components/navbar.dart';
 import 'package:nutriva_sprint3/enum/tiposAgendamento.dart';
-import '../components/hero_heading.dart';
 import '../components/painelAgendamento.dart';
 
-class SchedulingScreen extends StatefulWidget {
-  const SchedulingScreen({super.key});
+class Agendamentoscreen extends StatefulWidget {
+  const Agendamentoscreen({super.key});
 
   @override
-  State<SchedulingScreen> createState() => _SchedulingScreenState();
+  State<Agendamentoscreen> createState() => _AgendamentoscreenState();
 }
 
-class _SchedulingScreenState extends State<SchedulingScreen> {
+class _AgendamentoscreenState extends State<Agendamentoscreen> {
   TiposAgendamento tipo = TiposAgendamento.doacao;
 
   @override
@@ -31,7 +31,7 @@ class _SchedulingScreenState extends State<SchedulingScreen> {
               Navbar(),
               Expanded(
                 child: SingleChildScrollView(
-                  padding: EdgeInsets.fromLTRB(20, 18, 20, 50),
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   child: Center(
                     child: ConstrainedBox(
                       constraints: BoxConstraints(maxWidth: 860),
@@ -55,6 +55,50 @@ class _SchedulingScreenState extends State<SchedulingScreen> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class HeroHeading extends StatelessWidget {
+  const HeroHeading({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          'AGENDAMENTO',
+          textAlign: TextAlign.center,
+          style: GoogleFonts.inter(
+            color: Color(0xFF42BFC0),
+            fontSize: 11,
+            letterSpacing: 2.1,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
+        const SizedBox(height: 14),
+        Text(
+          'Três minutos. Uma vida\ntransformada.',
+          textAlign: TextAlign.center,
+          style: GoogleFonts.inter(
+            color: Color(0xFF052D55),
+            fontSize: 39,
+            height: 0.98,
+            fontWeight: FontWeight.w800,
+            letterSpacing: -.8,
+          ),
+        ),
+        const SizedBox(height: 13),
+        Text(
+          'Fluxo seguro e acolhedor para você agendar sua doação.',
+          textAlign: TextAlign.center,
+          style: GoogleFonts.inter(
+            color: Color(0xFF6C7780),
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
+          ),
+        ),
+      ],
     );
   }
 }

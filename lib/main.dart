@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Nutrivia',
+      title: 'Nutriva',
       debugShowCheckedModeBanner: false,
       //routes: {
       //  AppRoutes.splash: (context) => const SplashScreen(),

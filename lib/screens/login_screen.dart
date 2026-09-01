@@ -10,27 +10,23 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final emailController = TextEditingController(text: 'admin@nutriva.org.br');
-  final passwordController = TextEditingController(text: '123456789');
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
   bool rememberMe = false;
   bool loading = false;
+
+  Future<void> _login() async {
+    setState(() => loading = true);
+    await Future.delayed(Duration(milliseconds: 600));
+    if (!mounted) return;
+    setState(() => loading = false);
+  }
 
   @override
   void dispose() {
     emailController.dispose();
     passwordController.dispose();
     super.dispose();
-  }
-
-  Future<void> _login() async {
-    setState(() => loading = true);
-    await Future.delayed(const Duration(milliseconds: 600));
-    if (!mounted) return;
-    setState(() => loading = false);
-
-    ScaffoldMessenger.of(
-      context,
-    ).showSnackBar(const SnackBar(content: Text('Login enviado.')));
   }
 
   @override
@@ -57,3 +53,5 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
+
+ 

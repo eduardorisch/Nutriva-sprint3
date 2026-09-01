@@ -60,16 +60,34 @@ class LoginPainel extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                _FieldLabel('E-mail'),
+                Text(
+                  'E-mail',
+                  style: GoogleFonts.inter(
+                    color: Color(0xFF516172),
+                    fontSize: 7,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
                 SizedBox(height: 6),
                 _Input(
                   controller: emailController,
                   keyboardType: TextInputType.emailAddress,
+                  dica: 'admin@nutriva.org.br',
                 ),
                 SizedBox(height: 12),
-                _FieldLabel('Senha'),
+                Text(
+                  'Senha',
+                  style: GoogleFonts.inter(
+                    color: Color(0xFF516172),
+                    fontSize: 7,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
                 SizedBox(height: 6),
-                _Input(controller: passwordController, obscureText: true),
+                _Input(controller: passwordController,
+                 obscureText: true,
+                  dica: '123456789',
+                  ),
                 SizedBox(height: 6),
                 Row(
                   children: [
@@ -127,7 +145,6 @@ class LoginPainel extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      elevation: 0,
                     ),
                     child: loading
                         ? SizedBox(
@@ -148,9 +165,7 @@ class LoginPainel extends StatelessWidget {
                           ),
                   ),
                 ),
-
                 SizedBox(height: 11),
-
                 Center(
                   child: TextButton(
                     onPressed: () {},
@@ -164,7 +179,7 @@ class LoginPainel extends StatelessWidget {
                       style: GoogleFonts.inter(
                         color: Color(0xFF9AA6B2),
                         fontSize: 8,
-                        fontWeight: FontWeight.w700
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ),
@@ -178,33 +193,17 @@ class LoginPainel extends StatelessWidget {
   }
 }
 
-class _FieldLabel extends StatelessWidget {
-  final String text;
-
-  const _FieldLabel(this.text);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: GoogleFonts.inter(
-        color: Color(0xFF516172),
-        fontSize: 7,
-        fontWeight: FontWeight.w600,
-      ),
-    );
-  }
-}
-
 class _Input extends StatelessWidget {
   final TextEditingController controller;
   final bool obscureText;
   final TextInputType? keyboardType;
+  final String? dica;
 
   const _Input({
     required this.controller,
     this.obscureText = false,
     this.keyboardType,
+    this.dica
   });
 
   @override
@@ -218,6 +217,7 @@ class _Input extends StatelessWidget {
         style: GoogleFonts.inter(fontSize: 8, color: Color(0xFF263746)),
         cursorColor: Color(0xFF20AFAF),
         decoration: InputDecoration(
+          hintText: dica,
           filled: true,
           fillColor: Colors.white,
           contentPadding: EdgeInsets.symmetric(horizontal: 10),

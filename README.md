@@ -6,7 +6,7 @@
 
 ## 👥 Equipe
 
-**Nome da equipe:** [NOME DA EQUIPE]
+**Nome da equipe:** Nutriva
 
 ### Integrantes
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nutriva_sprint3/navigation/AppRoutes.dart';
 import 'package:nutriva_sprint3/navigation/appNavigation.dart';
+import 'package:nutriva_sprint3/screens/dashboardScreen.dart';
 import 'package:nutriva_sprint3/screens/faqScreen.dart';
 import 'package:nutriva_sprint3/screens/homeScreen.dart';
 import 'package:nutriva_sprint3/screens/agendamentoScreen.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       //},
       //initialRoute: AppRoutes.splash,
       //onGenerateRoute: AppNavigation.generateRoute,
-      home: MapaScreen(),
+      home: Dashboardscreen(),
     );
   }
 }

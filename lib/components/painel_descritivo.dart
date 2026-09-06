@@ -36,7 +36,7 @@ class BrandPanel extends StatelessWidget {
             ),
           ),
           Positioned(left: 25, top: 30, child: Logo()),
-          Positioned(left: 25, top: 300, child: _BrandCopy()),
+          Positioned(left: 25, top: 250, child: _BrandCopy()),
           Positioned(
             left: 30,
             bottom: 40,

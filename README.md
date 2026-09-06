@@ -37,9 +37,9 @@ O aplicativo permite que o usuário se conecte com bancos e postos de coleta de 
 
 # 📱 Principais Telas
 
-## 🏠 2. Tela de Apresentação
+## 🏠 1. Tela de Apresentação
 
-![Tela de Apresentação](paosdda)
+![Tela de Apresentação](imgs\homeScreen.png)
 
 ### Descrição
 
@@ -47,9 +47,9 @@ A tela de apresentação é o primeiro contato do usuário com o projeto Nutriva
 
 ---
 
-## 📍 3. Tela de Localização de Postos
+## 📍 2. Tela de Localização de Postos
 
-![Tela de Localização](paosdda)
+![Tela de Localização](imgs\mapaScreen.png)
 
 ### Descrição
 
@@ -57,19 +57,19 @@ A tela de localização de postos permite que o usuário encontre um posto de co
 
 ---
 
-## 📅 4. Tela de Agendamento
+## 📅 3. Tela de Agendamento
 
-![Tela de Agendamento](paosdda)
+![Tela de Agendamento](imgs\AgendamentoScreen.png)
 
 ### Descrição
 
-A tela de agendamento permite que o usuário realize um agendamento com o posto de coleta desejado, podendo marcar uma visita, realizar uma doação ou participar de um evento.
+A tela de agendamento permite que o usuário realize um agendamento com o posto de coleta desejado e acomponhe o seu progresso, podendo marcar uma visita, realizar uma doação ou participar de um evento.
 
 ---
 
-## ❓ 5. Tela de Dúvidas
+## ❓ 4. Tela de Dúvidas
 
-![Tela de Dúvidas](paosdda)
+![Tela de Dúvidas](imgs\faqScreen.png)
 
 ### Descrição
 
@@ -77,9 +77,9 @@ A tela de dúvidas foi desenvolvida para esclarecer dúvidas do usuário relacio
 
 ---
 
-## 🍼 6. Tela da Jornada
+## 🍼 5. Tela da Jornada
 
-![Tela da Jornada](paosdda)
+![Tela da Jornada](imgs\JornadaScreen.png)
 
 ### Descrição
 
@@ -87,9 +87,9 @@ A tela da jornada foi desenvolvida para informar a usuária sobre todas as etapa
 
 ---
 
-## 🔐 7. Tela de Acesso Restrito
+## 🔐 6. Tela de Acesso Restrito
 
-![Tela de Acesso Restrito](paosdda)
+![Tela de Acesso Restrito](imgs\LoginScreen.png)
 
 ### Descrição
 
@@ -97,9 +97,9 @@ A tela de acesso restrito permite que o usuário acesse sua conta de administrad
 
 ---
 
-## 📊 8. Tela de Dashboard
+## 📊 7. Tela de Dashboard
 
-![Tela de Dashboard](paosdda)
+![Tela de Dashboard](imgs\DashboardScreen.png)
 
 ### Descrição
 
@@ -108,3 +108,12 @@ A tela de dashboard permite que o usuário com acesso de administrador visualize
 ---
 
 # ▶️ Como executar o projeto
+Execute os seguintes comandos no cmd na pasta aonde você ira clonar o repositorio
+``` bash
+git clone https://github.com/eduardorisch/Nutriva-sprint3.git
+cd Nutriva-sprint3
+flutter run -d chrome
+```
+---
+# 📝 Notas
+Ao fazer o teste de login usar o email mockado: admin@nutriva.org.br e a senha mockada: 123456789.

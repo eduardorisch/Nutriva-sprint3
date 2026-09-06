@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nutriva_sprint3/navigation/AppRoutes.dart';
 
 class Navbar extends StatelessWidget {
   @override
@@ -23,40 +24,64 @@ class Navbar extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 100, vertical: 12),
         child: Row(
           children: [
-            Row(
-              children: [
-                Container(
-                  width: 24,
-                  height: 24,
-                  decoration: BoxDecoration(
-                    color: Color(0xFF073457),
-                    shape: BoxShape.circle,
+            InkWell(
+              borderRadius: BorderRadius.circular(12),
+              onTap: () {
+                Navigator.pushNamed(context, AppRoutes.login_restrito);
+              },
+              child: Row(
+                children: [
+                  Container(
+                    width: 24,
+                    height: 24,
+                    decoration: BoxDecoration(
+                      color: Color(0xFF073457),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Icon(
+                      Icons.water_drop,
+                      color: Colors.white,
+                      size: 12,
+                    ),
                   ),
-                  child: Icon(Icons.water_drop, color: Colors.white, size: 12),
-                ),
-                SizedBox(width: 6),
-                Text(
-                  'Nutriva',
-                  style: GoogleFonts.inter(
-                    color: Color(0xFF06294B),
-                    fontSize: 14,
-                    fontWeight: FontWeight.w800,
+                  SizedBox(width: 6),
+                  Text(
+                    'Nutriva',
+                    style: GoogleFonts.inter(
+                      color: Color(0xFF06294B),
+                      fontSize: 14,
+                      fontWeight: FontWeight.w800,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             Spacer(),
             Row(
               children: [
-                NavItem('Jornada'),
-                NavItem('Postos'),
-                NavItem('Agendar'),
-                NavItem('Dúvidas'),
+                NavItem(
+                  'Jornada',
+                  onTap: () => Navigator.pushNamed(context, AppRoutes.jornada),
+                ),
+                NavItem(
+                  'Postos',
+                  onTap: () => Navigator.pushNamed(context, AppRoutes.mapa),
+                ),
+                NavItem(
+                  'Agendar',
+                  onTap: () => Navigator.pushNamed(context, AppRoutes.agenda),
+                ),
+                NavItem(
+                  'Dúvidas',
+                  onTap: () => Navigator.pushNamed(context, AppRoutes.duvida),
+                ),
               ],
             ),
             Spacer(),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, AppRoutes.agenda);
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color(0xFF06294B),
                 foregroundColor: Colors.white,
@@ -89,19 +114,24 @@ class Navbar extends StatelessWidget {
 
 class NavItem extends StatelessWidget {
   final String text;
+  final VoidCallback? onTap;
 
-  const NavItem(this.text);
+  const NavItem(this.text, {this.onTap, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 13),
-      child: Text(
-        text,
-        style: GoogleFonts.inter(
-          fontSize: 12,
-          color: Color(0xFF6A7B84),
-          fontWeight: FontWeight.w500,
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(8),
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 13, vertical: 6),
+        child: Text(
+          text,
+          style: GoogleFonts.inter(
+            fontSize: 12,
+            color: Color(0xFF6A7B84),
+            fontWeight: FontWeight.w500,
+          ),
         ),
       ),
     );

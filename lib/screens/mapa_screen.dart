@@ -96,11 +96,11 @@ class _MapaScreen extends State<MapaScreen> {
       backgroundColor: Color(0xFFF5FAFB),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24),
+          padding: EdgeInsets.fromLTRB(24, 0, 24, 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Navbar(),
+              Center(child: Navbar()),
               Text(
                 'POSTOS PRÓXIMOS',
                 style: GoogleFonts.inter(
@@ -130,7 +130,7 @@ class _MapaScreen extends State<MapaScreen> {
                         color: Color(0xFF66747E),
                         fontSize: 11,
                         height: 1.4,
-                        fontWeight: FontWeight.w600
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
                   ),

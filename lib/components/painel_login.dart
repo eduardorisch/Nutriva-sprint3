@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nutriva_sprint3/navigation/AppRoutes.dart';
 
 class LoginPainel extends StatelessWidget {
   final TextEditingController emailController;
@@ -8,6 +9,8 @@ class LoginPainel extends StatelessWidget {
   final bool loading;
   final ValueChanged<bool> onRememberChanged;
   final VoidCallback onLogin;
+
+  
 
   const LoginPainel({
     required this.emailController,
@@ -84,10 +87,11 @@ class LoginPainel extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 6),
-                _Input(controller: passwordController,
-                 obscureText: true,
+                _Input(
+                  controller: passwordController,
+                  obscureText: true,
                   dica: '123456789',
-                  ),
+                ),
                 SizedBox(height: 6),
                 Row(
                   children: [
@@ -116,10 +120,16 @@ class LoginPainel extends StatelessWidget {
                     ),
                     Spacer(),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                           SnackBar(
+                            content: Text(
+                              'Um email sera enviado para o gestor!',
+                            ),
+                          ),
+                        );
+                      },
                       style: TextButton.styleFrom(
-                        minimumSize: Size.zero,
-                        padding: EdgeInsets.zero,
                         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                       ),
                       child: Text(
@@ -168,7 +178,7 @@ class LoginPainel extends StatelessWidget {
                 SizedBox(height: 11),
                 Center(
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {Navigator.pushNamed(context, AppRoutes.home);},
                     style: TextButton.styleFrom(
                       minimumSize: Size.zero,
                       padding: EdgeInsets.zero,
@@ -203,7 +213,7 @@ class _Input extends StatelessWidget {
     required this.controller,
     this.obscureText = false,
     this.keyboardType,
-    this.dica
+    this.dica,
   });
 
   @override

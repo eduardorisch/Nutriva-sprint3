@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nutriva_sprint3/enum/tiposAgendamento.dart';
-import 'progressoAgendamento.dart';
-import 'seletorAgendamento.dart';
+import 'progresso_agendamento.dart';
+import 'seletor_agendamento.dart';
 
 class SchedulingPanel extends StatelessWidget {
   final TiposAgendamento selectedObjective;

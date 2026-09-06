@@ -1,5 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nutriva_sprint3/enum/periodos.dart';
 
 class Dashboard extends StatelessWidget {
@@ -148,7 +149,7 @@ class DonationEvolutionCard extends StatelessWidget {
 
                       return Text(
                         value.toInt().toString(),
-                        style: const TextStyle(
+                        style: GoogleFonts.inter(
                           fontSize: 7,
                           color: Color(0xFF7B8496),
                         ),
@@ -173,7 +174,7 @@ class DonationEvolutionCard extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 7),
                         child: Text(
                           'Sem ${index + 1}',
-                          style: const TextStyle(
+                          style: GoogleFonts.inter(
                             fontSize: 7,
                             color: Color(0xFF7B8496),
                           ),
@@ -191,7 +192,7 @@ class DonationEvolutionCard extends StatelessWidget {
                     return spots.map((spot) {
                       return LineTooltipItem(
                         '${spot.y.toInt()}',
-                        const TextStyle(
+                         GoogleFonts.inter(
                           color: Colors.white,
                           fontSize: 10,
                           fontWeight: FontWeight.w700,
@@ -442,7 +443,7 @@ class LegendList extends StatelessWidget {
               Flexible(
                 child: Text(
                   item.name,
-                  style: const TextStyle(
+                  style:   GoogleFonts.inter(
                     color: Color(0xFF7B8496),
                     fontSize: 9,
                     fontWeight: FontWeight.w600,
@@ -454,7 +455,7 @@ class LegendList extends StatelessWidget {
 
               Text(
                 item.percentage,
-                style: const TextStyle(
+                style:  GoogleFonts.inter(
                   color: Color(0xFF172033),
                   fontSize: 9,
                   fontWeight: FontWeight.w800,
@@ -503,7 +504,7 @@ class DashboardCard extends StatelessWidget {
         children: [
           Text(
             title,
-            style: const TextStyle(
+            style:  GoogleFonts.inter(
               color: Color(0xFF172033),
               fontSize: 12,
               fontWeight: FontWeight.w900,
@@ -514,7 +515,7 @@ class DashboardCard extends StatelessWidget {
 
           Text(
             subtitle,
-            style: const TextStyle(
+            style:  GoogleFonts.inter(
               color: Color(0xFF7B8496),
               fontSize: 8,
               fontWeight: FontWeight.w500,

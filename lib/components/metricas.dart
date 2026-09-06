@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nutriva_sprint3/enum/periodos.dart';
 
 class Metricas extends StatelessWidget {
@@ -64,7 +65,7 @@ class MetricasCard extends StatelessWidget {
             children: [
               Text(
                 data.title,
-                style: const TextStyle(
+                style: GoogleFonts.inter(
                   fontSize: 7.5,
                   letterSpacing: .5,
                   color: Color(0xFF7B8496),
@@ -74,7 +75,7 @@ class MetricasCard extends StatelessWidget {
               const Spacer(),
               Text(
                 data.value,
-                style: const TextStyle(
+                style:  GoogleFonts.inter(
                   fontSize: 17,
                   color: Color(0xFF172033),
                   fontWeight: FontWeight.w900,
@@ -94,7 +95,7 @@ class MetricasCard extends StatelessWidget {
                   ),
                   Text(
                     data.delta,
-                    style: TextStyle(
+                    style:  GoogleFonts.inter(
                       color: data.positive
                           ? const Color(0xFF1BB6A5)
                           : const Color(0xFFE78396),
@@ -107,7 +108,7 @@ class MetricasCard extends StatelessWidget {
                     child: Text(
                       data.description,
                       overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
+                      style:  GoogleFonts.inter(
                         color: Color(0xFF7B8496),
                         fontSize: 7.5,
                       ),

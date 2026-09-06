@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:nutriva_sprint3/components/faqCard.dart';
+import 'package:nutriva_sprint3/components/faq_card.dart';
 import 'package:nutriva_sprint3/components/navbar.dart';
 
 class FaqScreen extends StatefulWidget {
@@ -43,7 +43,6 @@ class _FaqScreenState extends State<FaqScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(height: 8),
             Navbar(),
             Expanded(
               child: SingleChildScrollView(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nutriva_sprint3/components/heroSection.dart';
+import 'package:nutriva_sprint3/components/hero_section.dart';
 import 'package:nutriva_sprint3/components/navbar.dart';
 
 class Homescreen extends StatelessWidget {

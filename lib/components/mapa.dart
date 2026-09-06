@@ -31,7 +31,6 @@ class MapaBancos extends StatelessWidget {
 
           MarkerLayer(
             markers: [
-              // Local do usuário
               Marker(
                 point: centro,
                 width: 50,
@@ -48,11 +47,9 @@ class MapaBancos extends StatelessWidget {
                       ),
                     ],
                   ),
-                  child: Icon(Icons.location_on, color: Colors.white, size: 24),
+                  child: Icon(Icons.person, color: Colors.white, size: 24),
                 ),
               ),
-
-              // Bancos
               ...bancos.map((banco) {
                 final isSelected = banco.nome == selecionado?.nome;
 

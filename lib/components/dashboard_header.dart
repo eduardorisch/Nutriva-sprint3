@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:nutriva_sprint3/navigation/AppRoutes.dart';
 
 class DashboardHeader extends StatelessWidget {
   const DashboardHeader({super.key});
@@ -19,13 +21,13 @@ class DashboardHeader extends StatelessWidget {
             children: [
               const Logo(),
               const SizedBox(width: 10),
-              const Column(
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     'Nutriva',
-                    style: TextStyle(
+                    style: GoogleFonts.inter(
                       fontSize: 14,
                       fontWeight: FontWeight.w800,
                       color: Color(0xFF172033),
@@ -34,7 +36,7 @@ class DashboardHeader extends StatelessWidget {
                   ),
                   Text(
                     'ADMIN DASHBOARD',
-                    style: TextStyle(
+                    style: GoogleFonts.inter(
                       fontSize: 8,
                       fontWeight: FontWeight.w700,
                       letterSpacing: .4,
@@ -54,9 +56,9 @@ class DashboardHeader extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 7),
-              const Text(
+              Text(
                 'Dados em tempo real',
-                style: TextStyle(
+                style: GoogleFonts.inter(
                   fontSize: 10,
                   color: Color(0xFF7B8496),
                   fontWeight: FontWeight.w500,
@@ -71,7 +73,20 @@ class DashboardHeader extends StatelessWidget {
                   minimumSize: const Size(32, 30),
                   tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 ),
-                child: const Text('Sair', style: TextStyle(fontSize: 10)),
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                      AppRoutes.home,
+                      (route) => false,
+                    );
+                  },
+                  style: TextButton.styleFrom(
+                    minimumSize: Size.zero,
+                    padding: EdgeInsets.zero,
+                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  ),
+                  child: Text('Sair', style: GoogleFonts.inter(fontSize: 10)),
+                ),
               ),
             ],
           ),

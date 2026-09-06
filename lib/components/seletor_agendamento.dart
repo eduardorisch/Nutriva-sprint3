@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nutriva_sprint3/enum/tiposAgendamento.dart';
-import 'cardObjetivo.dart';
+import 'card_objetivo.dart';
 
 class ObjectiveSelector extends StatelessWidget {
   final TiposAgendamento selected;

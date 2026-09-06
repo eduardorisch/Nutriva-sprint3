@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nutriva_sprint3/components/dashboard.dart';
 import 'package:nutriva_sprint3/components/dashboard_header.dart';
 import 'package:nutriva_sprint3/components/metricas.dart';
@@ -116,10 +117,10 @@ class DashboardIntro extends StatelessWidget {
       width: 700,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
+        children: [
           Text(
             'VISÃO GERAL',
-            style: TextStyle(
+            style: GoogleFonts.inter(
               fontSize: 10,
               fontWeight: FontWeight.w800,
               letterSpacing: .6,
@@ -129,7 +130,7 @@ class DashboardIntro extends StatelessWidget {
           SizedBox(height: 4),
           Text(
             'Impacto da campanha',
-            style: TextStyle(
+            style:  GoogleFonts.inter(
               fontSize: 24,
               fontWeight: FontWeight.w900,
               color: Color(0xFF172033),
@@ -138,7 +139,7 @@ class DashboardIntro extends StatelessWidget {
           SizedBox(height: 5),
           Text(
             'Acompanhe a performance da Nutriva nos postos de coleta parceiros.',
-            style: TextStyle(fontSize: 12, color: Color(0xFF7B8496)),
+            style:  GoogleFonts.inter(fontSize: 12, color: Color(0xFF7B8496)),
           ),
         ],
       ),
@@ -190,7 +191,7 @@ class FilterButton extends StatelessWidget {
 
                 Text(
                   periodo.label,
-                  style: const TextStyle(
+                  style:  GoogleFonts.inter(
                     fontSize: 12,
                     color: Color(0xFF172033),
                   ),
@@ -218,7 +219,7 @@ class FilterButton extends StatelessWidget {
 
             Text(
               label,
-              style: const TextStyle(
+              style:   GoogleFonts.inter(
                 fontSize: 11,
                 fontWeight: FontWeight.w600,
                 color: Color(0xFF172033),

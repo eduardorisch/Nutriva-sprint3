@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nutriva_sprint3/components/navbar.dart';
 import 'package:nutriva_sprint3/enum/tiposAgendamento.dart';
-import '../components/painelAgendamento.dart';
+import '../components/painel_agendamento.dart';
 
 class Agendamentoscreen extends StatefulWidget {
   const Agendamentoscreen({super.key});

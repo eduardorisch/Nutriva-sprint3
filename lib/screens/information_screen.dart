@@ -25,7 +25,7 @@ class InformationScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Navbar(),
+                Center(child: Navbar()),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 36, vertical: 30),
                   child: Column(

@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nutriva_sprint3/navigation/AppRoutes.dart';
 
 class HeroSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //final width = MediaQuery.sizeOf(context).width;
-
-    //final isMobile = width < 700;
 
     return Center(
       child: ConstrainedBox(
@@ -122,7 +120,7 @@ class HeroText extends StatelessWidget {
         Row(
           children: [
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {Navigator.pushNamed(context, AppRoutes.agenda);},
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color(0xFF06294B),
                 foregroundColor: Colors.white,
@@ -149,7 +147,7 @@ class HeroText extends StatelessWidget {
             ),
             SizedBox(width: 8),
             OutlinedButton(
-              onPressed: () {},
+              onPressed: () {Navigator.pushNamed(context, AppRoutes.mapa);},
               style: OutlinedButton.styleFrom(
                 backgroundColor: Colors.white.withOpacity(.7),
                 foregroundColor: Color(0xFF52656C),

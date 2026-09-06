@@ -39,7 +39,7 @@ O aplicativo permite que o usuário se conecte com bancos e postos de coleta de 
 
 ## 🏠 1. Tela de Apresentação
 
-![Tela de Apresentação](imgs\homeScreen.png)
+![Tela de Apresentação](imgs/homeScreen.png)
 
 ### Descrição
 
@@ -49,7 +49,7 @@ A tela de apresentação é o primeiro contato do usuário com o projeto Nutriva
 
 ## 📍 2. Tela de Localização de Postos
 
-![Tela de Localização](imgs\mapaScreen.png)
+![Tela de Localização](imgs/mapaScreen.png)
 
 ### Descrição
 
@@ -59,7 +59,7 @@ A tela de localização de postos permite que o usuário encontre um posto de co
 
 ## 📅 3. Tela de Agendamento
 
-![Tela de Agendamento](imgs\AgendamentoScreen.png)
+![Tela de Agendamento](imgs/AgendamentoScreen.png)
 
 ### Descrição
 
@@ -69,7 +69,7 @@ A tela de agendamento permite que o usuário realize um agendamento com o posto 
 
 ## ❓ 4. Tela de Dúvidas
 
-![Tela de Dúvidas](imgs\faqScreen.png)
+![Tela de Dúvidas](imgs/faqScreen.png)
 
 ### Descrição
 
@@ -79,7 +79,7 @@ A tela de dúvidas foi desenvolvida para esclarecer dúvidas do usuário relacio
 
 ## 🍼 5. Tela da Jornada
 
-![Tela da Jornada](imgs\JornadaScreen.png)
+![Tela da Jornada](imgs/JornadaScreen.png)
 
 ### Descrição
 
@@ -89,7 +89,7 @@ A tela da jornada foi desenvolvida para informar a usuária sobre todas as etapa
 
 ## 🔐 6. Tela de Acesso Restrito
 
-![Tela de Acesso Restrito](imgs\LoginScreen.png)
+![Tela de Acesso Restrito](imgs/LoginScreen.png)
 
 ### Descrição
 
@@ -99,7 +99,7 @@ A tela de acesso restrito permite que o usuário acesse sua conta de administrad
 
 ## 📊 7. Tela de Dashboard
 
-![Tela de Dashboard](imgs\DashboardScreen.png)
+![Tela de Dashboard](imgs/DashboardScreen.png)
 
 ### Descrição
 
